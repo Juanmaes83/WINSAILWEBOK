@@ -1,0 +1,114 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    --background: 0 0% 100%;
+    --foreground: 210 40% 20%;
+    --card: 0 0% 100%;
+    --card-foreground: 210 40% 20%;
+    --popover: 0 0% 100%;
+    --popover-foreground: 210 40% 20%;
+    --primary: 210 42% 20%;
+    --primary-foreground: 0 0% 98%;
+    --secondary: 210 40% 95%;
+    --secondary-foreground: 210 42% 20%;
+    --muted: 210 40% 95%;
+    --muted-foreground: 215 16% 47%;
+    --accent: 210 100% 50%;
+    --accent-foreground: 0 0% 98%;
+    --destructive: 0 84% 60%;
+    --destructive-foreground: 0 0% 98%;
+    --border: 214 32% 91%;
+    --input: 214 32% 91%;
+    --ring: 210 42% 20%;
+    --radius: 0.5rem;
+
+    /* OneSails custom colors - Updated with blue accent */
+    --onesails-blue: 210 100% 50%;
+    --onesails-navy: 210 42% 20%;
+    --onesails-red: 0 72% 36%;
+    --onesails-light-gray: 0 0% 98%;
+    --onesails-gray: 215 16% 47%;
+  }
+
+  .dark {
+    --background: 210 42% 20%;
+    --foreground: 0 0% 98%;
+    --card: 210 42% 20%;
+    --card-foreground: 0 0% 98%;
+    --popover: 210 42% 20%;
+    --popover-foreground: 0 0% 98%;
+    --primary: 0 0% 98%;
+    --primary-foreground: 210 42% 20%;
+    --secondary: 215 27.9% 16.9%;
+    --secondary-foreground: 0 0% 98%;
+    --muted: 215 27.9% 16.9%;
+    --muted-foreground: 217.9 10.6% 64.9%;
+    --accent: 210 100% 50%;
+    --accent-foreground: 0 0% 98%;
+    --destructive: 0 62.8% 30.6%;
+    --destructive-foreground: 0 0% 98%;
+    --border: 215 27.9% 16.9%;
+    --input: 215 27.9% 16.9%;
+    --ring: 216 12.2% 83.9%;
+  }
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+  body {
+    @apply bg-background text-foreground font-sans;
+  }
+}
+
+/* OneSails specific classes */
+@layer components {
+  .text-onesails-blue {
+    color: hsl(var(--onesails-blue));
+  }
+  .bg-onesails-blue {
+    background-color: hsl(var(--onesails-blue));
+  }
+  .text-onesails-navy {
+    color: hsl(var(--onesails-navy));
+  }
+  .bg-onesails-navy {
+    background-color: hsl(var(--onesails-navy));
+  }
+  .text-onesails-red {
+    color: hsl(var(--onesails-red));
+  }
+  .bg-onesails-red {
+    background-color: hsl(var(--onesails-red));
+  }
+  .text-onesails-gray {
+    color: hsl(var(--onesails-gray));
+  }
+
+  /* WinSail specific classes - same colors as OneSails for consistency */
+  .text-winsail-blue {
+    color: hsl(var(--onesails-blue));
+  }
+  .bg-winsail-blue {
+    background-color: hsl(var(--onesails-blue));
+  }
+  .text-winsail-navy {
+    color: hsl(var(--onesails-navy));
+  }
+  .bg-winsail-navy {
+    background-color: hsl(var(--onesails-navy));
+  }
+
+  /* Legacy green classes mapped to blue for backward compatibility */
+  .text-onesails-green {
+    color: hsl(var(--onesails-blue));
+  }
+  .bg-onesails-green {
+    background-color: hsl(var(--onesails-blue));
+  }
+}
+/* Force rebuild Wed Jul  9 15:31:00 UTC 2025 */
