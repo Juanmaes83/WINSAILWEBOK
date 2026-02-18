@@ -1,13 +1,13 @@
 [build]
-  command = "rm -rf .next node_modules/.cache .vercel && rm -f bun.lock package-lock.json && bun install --force && bun run build"
+  command = "npm run build"
   publish = ".next"
 
 [build.environment]
-  NETLIFY_NEXT_PLUGIN_SKIP = "true"
-  NODE_VERSION = "22"
-  NEXT_CACHE_SKIP = "true"
-  FORCE_REBUILD = "$(date +%s)"
-  NPM_CONFIG_CACHE = "/tmp/npm-cache-$(date +%s)"
+  NODE_VERSION = "20"
+  # Eliminamos el SKIP para que el motor funcione
+
+[[plugins]]
+  package = "@netlify/plugin-nextjs"
 
 [[redirects]]
   from = "/super-yachts"
@@ -19,57 +19,4 @@
   to = "/spinnakers-simetricos-y-asimetricos-de-crucero"
   status = 301
 
-[[redirects]]
-  from = "/spinnakers-regata"
-  to = "/spinnakers-simetricos-y-asimetricos-de-regata"
-  status = 301
-
-[[redirects]]
-  from = "/velas-regata"
-  to = "/velas-de-regata"
-  status = 301
-
-[[redirects]]
-  from = "/velas-crucero"
-  to = "/velas-de-crucero-y-de-crucero-de-alto-rendimiento"
-  status = 301
-
-[[redirects]]
-  from = "/ocean-offshore"
-  to = "/velas-ocean-offshore"
-  status = 301
-
-[[redirects]]
-  from = "/multihull"
-  to = "/velas-multihull"
-  status = 301
-
-[[redirects]]
-  from = "/yates-clasicos"
-  to = "/velas-para-yates-clasicos"
-  status = 301
-
-[[redirects]]
-  from = "/optimist"
-  to = "/one-design/optimist"
-  status = 301
-
-[[redirects]]
-  from = "/velas-crucero"
-  to = "/velas-de-crucero"
-  status = 301
-
-[[redirects]]
-  from = "/sustainable-sails"
-  to = "/velas-sostenibles"
-  status = 301
-
-[[redirects]]
-  from = "/equipamiento"
-  to = "/equipamiento-accesorios"
-  status = 301
-
-[[redirects]]
-  from = "/accesorios"
-  to = "/equipamiento-accesorios"
-  status = 301
+# ... (Mantén aquí el resto de tus redireccionamientos tal cual los tenías)
